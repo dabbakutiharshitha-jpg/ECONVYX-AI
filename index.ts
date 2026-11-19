@@ -1,112 +1,359 @@
-// ECONVYX AI - Master Express API Server
-// Turn financial complexity into clarity.
+// Frontend TypeScript Type Definitions
 
-import express from 'express';
-import cors from 'cors';
-import path from 'path';
-import dotenv from 'dotenv';
-import session from 'express-session';
-import { CLIENT_ORIGINS } from './config.js';
+export type WorkspaceRole = 'owner' | 'admin' | 'finance_manager' | 'accountant' | 'viewer';
+export type BusinessType = 'manufacturing' | 'wholesale' | 'distribution' | 'services' | 'other';
 
-// Load environment variables FIRST before any imports that read them
-dotenv.config();
+export interface User {
+  id: string;
+  email: string;
+  fullName: string;
+  phone?: string;
+  avatar?: string;
+  microsoftId?: string;
+  role: string;
+  createdAt: string;
+  updatedAt?: string;
+}
 
-// Import Routes (after dotenv so env vars are available)
-import authRouter from './routes/auth.js';
-import workspacesRouter from './routes/workspaces.js';
-import overviewRouter from './routes/overview.js';
-import documentsRouter from './routes/documents.js';
-import verificationRouter from './routes/verification.js';
-import receivablesRouter from './routes/receivables.js';
-import payablesRouter from './routes/payables.js';
-import customersRouter from './routes/customers.js';
-import suppliersRouter from './routes/suppliers.js';
-import reconciliationRouter from './routes/reconciliation.js';
-import cashflowRouter from './routes/cashflow.js';
-import aiAssistantRouter from './routes/aiAssistant.js';
-import remindersRouter from './routes/reminders.js';
-import insightsRouter from './routes/insights.js';
-import reportsRouter from './routes/reports.js';
-import auditRouter from './routes/audit.js';
-import settingsRouter from './routes/settings.js';
+export interface BusinessWorkspace {
+  id: string;
+  name: string;
+  slug: string;
+  businessType: BusinessType;
+  industry?: string;
+  gstin?: string;
+  pan?: string;
+  address?: string;
+  city?: string;
+  state?: string;
+  pinCode?: string;
+  defaultCurrency: string;
+  financialYearStart: string;
+  defaultPaymentTermsDays: number;
+  timezone: string;
+  isDemo: boolean;
+  createdAt: string;
+}
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+export interface Customer {
+  id: string;
+  workspaceId: string;
+  name: string;
+  companyName?: string;
+  email?: string;
+  phone?: string;
+  gstin?: string;
+  billingAddress?: string;
+  shippingAddress?: string;
+  paymentTermsDays: number;
+  creditLimitPaise: number;
+  notes?: string;
+  isActive: boolean;
+  profile?: {
+    totalInvoicedPaise: number;
+    totalInvoicedFormatted: string;
+    totalReceivedPaise: number;
+    totalReceivedFormatted: string;
+    currentOutstandingPaise: number;
+    currentOutstandingFormatted: string;
+    overduePaise: number;
+    overdueFormatted: string;
+    invoiceCount: number;
+    paymentCompletionPercentage: number;
+    onTimePercentage: number;
+    behavior: 'on_time' | 'occasionally_late' | 'frequently_late' | 'high_risk' | 'insufficient_history';
+    rationale: string;
+  };
+  createdAt: string;
+}
 
-// Security & Middlewares
-app.use(cors({
-  origin(origin, callback) {
-    if (!origin || process.env.NODE_ENV !== 'production' || CLIENT_ORIGINS.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Origin is not allowed by CORS.'));
-    }
-  },
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'x-workspace-id'],
-}));
-app.use(express.json({ limit: '1mb' }));
-app.use(express.urlencoded({ extended: true, limit: '1mb' }));
+export interface Supplier {
+  id: string;
+  workspaceId: string;
+  name: string;
+  contactPerson?: string;
+  email?: string;
+  phone?: string;
+  gstin?: string;
+  address?: string;
+  paymentTermsDays: number;
+  notes?: string;
+  isActive: boolean;
+  financialSummary?: {
+    totalBilledPaise: number;
+    totalBilledFormatted: string;
+    totalPaidPaise: number;
+    totalPaidFormatted: string;
+    outstandingPaise: number;
+    outstandingFormatted: string;
+    billCount: number;
+  };
+  createdAt: string;
+}
 
-// Uploaded documents are served only by authenticated, workspace-scoped routes.
+export type DocumentType =
+  | 'purchase_order'
+  | 'grn'
+  | 'delivery_acknowledgement'
+  | 'tax_invoice'
+  | 'credit_note'
+  | 'debit_note'
+  | 'bank_statement'
+  | 'other';
 
-// Health Check
-app.get('/api/health', (req, res) => {
-  res.json({
-    status: 'healthy',
-    product: 'ECONVYX AI',
-    tagline: 'Turn financial complexity into clarity.',
-    version: '1.0.0',
-    timestamp: new Date().toISOString(),
-  });
-});
+export type ExtractionStatus =
+  | 'uploaded'
+  | 'processing'
+  | 'extracted'
+  | 'needs_review'
+  | 'confirmed'
+  | 'failed';
 
-// Mount Modular API Routes
-app.use('/api/auth', authRouter);
-app.use('/api/workspaces', workspacesRouter);
-app.use('/api/overview', overviewRouter);
-app.use('/api/documents', documentsRouter);
-app.use('/api/verification', verificationRouter);
-app.use('/api/receivables', receivablesRouter);
-app.use('/api/payables', payablesRouter);
-app.use('/api/customers', customersRouter);
-app.use('/api/suppliers', suppliersRouter);
-app.use('/api/reconciliation', reconciliationRouter);
-app.use('/api/cashflow', cashflowRouter);
-app.use('/api/ai-assistant', aiAssistantRouter);
-app.use('/api/reminders', remindersRouter);
-app.use('/api/insights', insightsRouter);
-app.use('/api/reports', reportsRouter);
-app.use('/api/audit', auditRouter);
-app.use('/api/settings', settingsRouter);
+export interface DocumentItem {
+  id: string;
+  workspaceId: string;
+  fileName: string;
+  originalName: string;
+  filePath: string;
+  fileType: string;
+  fileSizeBytes: number;
+  documentType: DocumentType;
+  extractionStatus: ExtractionStatus;
+  confidenceScore: number;
+  extractedData?: {
+    documentType: DocumentType;
+    overallConfidence: number;
+    fields: {
+      documentNumber?: { value: string; confidence: number };
+      issueDate?: { value: string; confidence: number };
+      dueDate?: { value: string; confidence: number };
+      counterpartyName?: { value: string; confidence: number };
+      counterpartyGstin?: { value: string; confidence: number };
+      poReference?: { value: string; confidence: number };
+      subtotalPaise?: { value: number; confidence: number };
+      taxTotalPaise?: { value: number; confidence: number };
+      grandTotalPaise?: { value: number; confidence: number };
+      paymentTermsDays?: { value: number; confidence: number };
+      lineItems?: Array<{
+        description: string;
+        hsnSac?: string;
+        quantity: number;
+        unit: string;
+        unitPricePaise: number;
+        taxRatePercent: number;
+        totalAmountPaise: number;
+        confidence: number;
+      }>;
+    };
+  };
+  reviewedBy?: string;
+  reviewedAt?: string;
+  createdAt: string;
+}
 
-// Serve frontend in production
-const distPath = path.resolve(process.cwd(), 'dist');
-app.use(express.static(distPath));
-app.get('*', (req, res, next) => {
-  if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
-    return next();
-  }
-  res.sendFile(path.join(distPath, 'index.html'), (err) => {
-    if (err) next();
-  });
-});
+export type InvoiceStatus =
+  | 'draft'
+  | 'awaiting_confirmation'
+  | 'open'
+  | 'due_soon'
+  | 'overdue'
+  | 'partially_paid'
+  | 'paid'
+  | 'disputed'
+  | 'cancelled';
 
-// Centralized Error Handler
-app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
-  console.error('Unhandled Server Error:', err);
-  res.status(err.status || 500).json({
-    error: err.message || 'Internal Server Error',
-    code: err.code || 'INTERNAL_ERROR',
-  });
-});
+export interface InvoiceLineItem {
+  id: string;
+  invoiceId: string;
+  description: string;
+  hsnSac?: string;
+  quantity: number;
+  unit: string;
+  unitPricePaise: number;
+  taxRatePercent: number;
+  taxableAmountPaise: number;
+  cgstPaise: number;
+  sgstPaise: number;
+  igstPaise: number;
+  totalAmountPaise: number;
+}
 
-app.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(`🚀 ECONVYX AI Platform Backend is operational`);
-  console.log(`⚡ Port: ${PORT} | Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`🔒 Tenant Isolation & Deterministic Engine: ACTIVE`);
-  console.log(`=======================================================`);
-});
+export interface Invoice {
+  id: string;
+  workspaceId: string;
+  customerId: string;
+  customer?: Customer;
+  documentId?: string;
+  invoiceNumber: string;
+  issueDate: string;
+  dueDate: string;
+  paymentTermsDays: number;
+  poReference?: string;
+  subtotalPaise: number;
+  taxableAmountPaise: number;
+  cgstPaise: number;
+  sgstPaise: number;
+  igstPaise: number;
+  discountPaise: number;
+  totalAmountPaise: number;
+  receivedAmountPaise: number;
+  outstandingAmountPaise: number;
+  status: InvoiceStatus;
+  notes?: string;
+  items?: InvoiceLineItem[];
+  createdAt: string;
+}
 
-export default app;
+export type BillStatus =
+  | 'draft'
+  | 'pending_review'
+  | 'approved'
+  | 'partially_paid'
+  | 'paid'
+  | 'overdue'
+  | 'disputed';
+
+export interface Bill {
+  id: string;
+  workspaceId: string;
+  supplierId: string;
+  supplier?: Supplier;
+  documentId?: string;
+  billNumber: string;
+  billDate: string;
+  dueDate: string;
+  paymentTermsDays: number;
+  poReference?: string;
+  totalAmountPaise: number;
+  paidAmountPaise: number;
+  outstandingAmountPaise: number;
+  status: BillStatus;
+  notes?: string;
+  createdAt: string;
+}
+
+export interface BankTransaction {
+  id: string;
+  workspaceId: string;
+  transactionDate: string;
+  description: string;
+  referenceNumber?: string;
+  type: 'credit' | 'debit';
+  amountPaise: number;
+  balancePaise?: number;
+  reconciliationStatus: 'unmatched' | 'suggested' | 'partially_matched' | 'matched' | 'ignored';
+  matchedInvoiceId?: string;
+  matchedBillId?: string;
+  matchedPaymentId?: string;
+  matchConfidence: number;
+  matchReason?: string;
+  createdAt: string;
+}
+
+export type VerificationStatus =
+  | 'verified'
+  | 'minor_difference'
+  | 'mismatch'
+  | 'missing_document'
+  | 'needs_review'
+  | 'disputed';
+
+export interface VerificationFinding {
+  id: string;
+  caseId: string;
+  fieldName: string;
+  expectedValue: string;
+  actualValue: string;
+  differenceValue: string;
+  monetaryDifferencePaise: number;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+}
+
+export interface VerificationCase {
+  id: string;
+  workspaceId: string;
+  caseNumber: string;
+  invoiceId?: string;
+  invoice?: Invoice;
+  poId?: string;
+  po?: any;
+  grnId?: string;
+  grn?: any;
+  status: VerificationStatus;
+  summary: string;
+  monetaryImpactPaise: number;
+  findings: VerificationFinding[];
+  reviewerComments?: string;
+  resolvedAt?: string;
+  createdAt: string;
+}
+
+export interface CashFlowTimelineItem {
+  date: string;
+  inflowRupees: number;
+  outflowRupees: number;
+  balanceRupees: number;
+  inflowFormatted: string;
+  outflowFormatted: string;
+  balanceFormatted: string;
+  description: string;
+}
+
+export interface CashFlowForecastResponse {
+  openingBalance: { paise: number; formatted: string };
+  horizonDays: number;
+  baseline: {
+    expectedInflowsPaise: number;
+    expectedInflowsFormatted: string;
+    expectedOutflowsPaise: number;
+    expectedOutflowsFormatted: string;
+    projectedBalancePaise: number;
+    projectedBalanceFormatted: string;
+    assumptions: string[];
+    timeline: CashFlowTimelineItem[];
+  };
+  scenario?: {
+    expectedInflowsPaise: number;
+    expectedInflowsFormatted: string;
+    expectedOutflowsPaise: number;
+    expectedOutflowsFormatted: string;
+    projectedBalancePaise: number;
+    projectedBalanceFormatted: string;
+    impactDifferencePaise: number;
+    impactDifferenceFormatted: string;
+    assumptions: string[];
+  } | null;
+  builtInScenarios: {
+    delayMajorInvoice: {
+      name: string;
+      projectedBalancePaise: number;
+      projectedBalanceFormatted: string;
+      impactPaise: number;
+      impactFormatted: string;
+    };
+  };
+}
+
+export interface Reminder {
+  id: string;
+  workspaceId: string;
+  invoiceId: string;
+  customerId: string;
+  tone: 'friendly' | 'professional' | 'firm' | 'final_notice';
+  subject: string;
+  messageBody: string;
+  status: 'draft' | 'copied' | 'sent';
+  createdAt: string;
+}
+
+export interface AuditLog {
+  id: string;
+  workspaceId: string;
+  userEmail: string;
+  action: string;
+  entityType: string;
+  entityId: string;
+  details: string;
+  createdAt: string;
+}

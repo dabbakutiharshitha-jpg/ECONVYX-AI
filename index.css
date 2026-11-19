@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-brand-border;
+  }
+  body {
+    @apply bg-brand-off-white text-brand-primary-navy antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1, "tnum" 1;
+  }
+}
+
+/* Custom sleek scrollbar for enterprise tables & sidebars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}
+
+/* Print styles for reports */
+@media print {
+  aside, header, button {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  body {
+    background: white !important;
+  }
+}
