@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="fullBgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a1030" />
+      <stop offset="60%" stop-color="#040618" />
+      <stop offset="100%" stop-color="#02030d" />
+    </radialGradient>
+
+    <!-- Ribbon Gradients -->
+    <linearGradient id="topRibbon" x1="280" y1="140" x2="520" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38f9d7" />
+      <stop offset="40%" stop-color="#00d7d0" />
+      <stop offset="100%" stop-color="#0077b6" />
+    </linearGradient>
+
+    <linearGradient id="midRibbon" x1="260" y1="240" x2="480" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="50%" stop-color="#00b4d8" />
+      <stop offset="100%" stop-color="#0077b6" />
+    </linearGradient>
+
+    <linearGradient id="botRibbon" x1="260" y1="320" x2="500" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="60%" stop-color="#0096c7" />
+      <stop offset="100%" stop-color="#03045e" />
+    </linearGradient>
+
+    <linearGradient id="leftFold" x1="260" y1="180" x2="310" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00e5ff" />
+      <stop offset="50%" stop-color="#0077b6" />
+      <stop offset="100%" stop-color="#023e8a" />
+    </linearGradient>
+
+    <linearGradient id="xTopRight" x1="420" y1="180" x2="550" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#0096c7" />
+    </linearGradient>
+
+    <linearGradient id="xBotRight" x1="420" y1="320" x2="550" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00b4d8" />
+      <stop offset="100%" stop-color="#0077b6" />
+    </linearGradient>
+
+    <!-- Amber Glow Gradient -->
+    <linearGradient id="orangeGlow" x1="430" y1="320" x2="500" y2="370" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffea00" />
+      <stop offset="40%" stop-color="#ff9e1b" />
+      <stop offset="100%" stop-color="#ff5400" />
+    </linearGradient>
+
+    <!-- Stylized X Gradients in ECONVYX -->
+    <linearGradient id="xCyanStroke" x1="610" y1="500" x2="680" y2="580" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#00b4d8" />
+    </linearGradient>
+
+    <linearGradient id="xOrangeStroke" x1="640" y1="540" x2="685" y2="585" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffea00" />
+      <stop offset="40%" stop-color="#ff9e1b" />
+      <stop offset="100%" stop-color="#ff5400" />
+    </linearGradient>
+
+    <!-- Cyan Horizontal Lines Fade -->
+    <linearGradient id="cyanLineLeft" x1="170" y1="655" x2="330" y2="655" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00d7d0" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="cyanLineRight" x1="470" y1="655" x2="630" y2="655" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="1" />
+      <stop offset="50%" stop-color="#00d7d0" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="fullAmberGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="fullCyanGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Navy Base Canvas -->
+  <rect width="800" height="800" fill="url(#fullBgGrad)" />
+
+  <!-- ============================================== -->
+  <!-- 1. FUTURISTIC GEOMETRIC ABSTRACT SYMBOL (TOP) -->
+  <!-- ============================================== -->
+  <g id="geometric-symbol" transform="translate(15, -10)">
+    <!-- Left Vertical Spine -->
+    <path
+      d="M260 210 L300 185 L300 435 L260 410 Z"
+      fill="url(#leftFold)"
+      opacity="0.95"
+    />
+    <path
+      d="M260 210 Q245 310 260 410 L300 435 Q280 310 300 185 Z"
+      fill="#03254c"
+      opacity="0.65"
+    />
+
+    <!-- Top Arching Ribbon (flowing across and down-right) -->
+    <path
+      d="M260 210 L350 148 L390 180 L330 220 L300 205 Z"
+      fill="url(#topRibbon)"
+      filter="url(#fullCyanGlow)"
+    />
+    <path
+      d="M350 148 L390 180 L450 225 L405 250 Z"
+      fill="url(#topRibbon)"
+    />
+
+    <!-- Top-Right Upward Arm of X -->
+    <path
+      d="M420 225 L500 170 L520 180 L455 290 L405 250 Z"
+      fill="url(#xTopRight)"
+      filter="url(#fullCyanGlow)"
+    />
+
+    <!-- Middle Arm (Horizontal connecting into diagonal) -->
+    <path
+      d="M260 300 L375 220 L405 245 L300 320 Z"
+      fill="url(#midRibbon)"
+    />
+    <path
+      d="M375 220 L440 270 L415 290 L355 245 Z"
+      fill="url(#midRibbon)"
+    />
+
+    <!-- Bottom Ribbon Loop (E bottom curving up-right) -->
+    <path
+      d="M260 410 L300 435 L425 360 L425 320 L300 400 Z"
+      fill="url(#botRibbon)"
+      filter="url(#fullCyanGlow)"
+    />
+
+    <!-- Bottom-Right Arm of X -->
+    <path
+      d="M410 300 L455 270 L520 410 L480 415 Z"
+      fill="url(#xBotRight)"
+      filter="url(#fullCyanGlow)"
+    />
+
+    <!-- Crossing Arm of X -->
+    <path
+      d="M300 400 L455 300 L495 330 L335 435 Z"
+      fill="url(#botRibbon)"
+    />
+
+    <!-- Glowing Amber / Orange Intersection Point -->
+    <path
+      d="M415 290 L460 265 L485 315 L440 340 Z"
+      fill="url(#orangeGlow)"
+      filter="url(#fullAmberGlow)"
+    />
+    <ellipse cx="455" cy="305" rx="20" ry="10" transform="rotate(-25 455 305)" fill="#ffea00" opacity="0.95" filter="url(#fullAmberGlow)" />
+    <circle cx="458" cy="302" r="7" fill="#ffffff" filter="url(#fullCyanGlow)" />
+  </g>
+
+  <!-- ============================================== -->
+  <!-- 2. "ECONVYX" TYPOGRAPHY (MIDDLE)               -->
+  <!-- ============================================== -->
+  <g id="econvyx-wordmark">
+    <!-- "ECONVY" in Bold Modern Clean White -->
+    <text
+      x="130"
+      y="575"
+      fill="#ffffff"
+      font-family="Inter, system-ui, -apple-system, sans-serif"
+      font-size="64"
+      font-weight="800"
+      letter-spacing="5"
+    >ECONVY</text>
+
+    <!-- Stylized "X" (Cyan & Orange) -->
+    <!-- Diagonal 1: Backslash (\) in Bright Cyan -->
+    <path
+      d="M608 522 L632 522 L676 575 L652 575 Z"
+      fill="url(#xCyanStroke)"
+      filter="url(#fullCyanGlow)"
+    />
+    <!-- Diagonal 2: Forward slash (/) upper part in Cyan -->
+    <path
+      d="M652 522 L676 522 L646 558 L634 544 Z"
+      fill="url(#xCyanStroke)"
+      filter="url(#fullCyanGlow)"
+    />
+    <!-- Diagonal 2: Lower-right leg in Vibrant Orange/Amber -->
+    <path
+      d="M634 544 L646 558 L620 575 L608 575 Z"
+      fill="url(#xOrangeStroke)"
+      filter="url(#fullAmberGlow)"
+    />
+    <!-- Subtle bright glow at X intersection -->
+    <circle cx="642" cy="548" r="3" fill="#ffffff" opacity="0.9" />
+  </g>
+
+  <!-- ============================================== -->
+  <!-- 3. "— AI —" SUBTITLE (BOTTOM)                  -->
+  <!-- ============================================== -->
+  <g id="ai-subtitle">
+    <!-- Left Thin Cyan Glowing Line -->
+    <line
+      x1="180"
+      y1="645"
+      x2="330"
+      y2="645"
+      stroke="url(#cyanLineLeft)"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      filter="url(#fullCyanGlow)"
+    />
+
+    <!-- "AI" in Bright Cyan Uppercase -->
+    <text
+      x="400"
+      y="657"
+      text-anchor="middle"
+      fill="#00f0ff"
+      font-family="Inter, system-ui, -apple-system, sans-serif"
+      font-size="34"
+      font-weight="700"
+      letter-spacing="14"
+      filter="url(#fullCyanGlow)"
+    >AI</text>
+
+    <!-- Right Thin Cyan Glowing Line -->
+    <line
+      x1="470"
+      y1="645"
+      x2="620"
+      y2="645"
+      stroke="url(#cyanLineRight)"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      filter="url(#fullCyanGlow)"
+    />
+  </g>
+</svg>

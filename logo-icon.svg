@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <defs>
+    <!-- Deep Navy Background -->
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0d1535"/>
+      <stop offset="100%" stop-color="#070d1f"/>
+    </radialGradient>
+
+    <!-- Main Cyan/Turquoise Ribbon Gradient -->
+    <linearGradient id="cyanMain" x1="130" y1="130" x2="380" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38ffd7"/>
+      <stop offset="45%" stop-color="#00d4c8"/>
+      <stop offset="100%" stop-color="#0077b6"/>
+    </linearGradient>
+
+    <!-- Secondary Cyan for right X arm -->
+    <linearGradient id="cyanRight" x1="290" y1="120" x2="400" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38ffd7"/>
+      <stop offset="100%" stop-color="#0096c7"/>
+    </linearGradient>
+
+    <!-- Amber / Orange Glow at intersection -->
+    <radialGradient id="amberGlow" cx="58%" cy="52%" r="12%">
+      <stop offset="0%" stop-color="#ffcc00" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#ff8c00" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff4500" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft glow filter for ribbons -->
+    <filter id="glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong glow for amber hotspot -->
+    <filter id="amberFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bg)" rx="0"/>
+
+  <!-- ═══════════════════════════════════════════
+       EX MONOGRAM SYMBOL
+       Matches uploaded reference: E-shaped left
+       body with X crossover on right, all in
+       bright turquoise/cyan 3D ribbon style
+  ═══════════════════════════════════════════ -->
+
+  <!-- Left vertical backbone of E -->
+  <path d="M148 148 L178 128 L178 358 L148 338 Z"
+        fill="url(#cyanMain)" opacity="0.95" filter="url(#glow)"/>
+
+  <!-- Top horizontal ribbon of E — sweeping right then curving into X top-left arm -->
+  <path d="M148 148 L228 110 L262 135 L210 170 L178 155 Z"
+        fill="url(#cyanMain)" filter="url(#glow)"/>
+  <path d="M228 110 L262 135 L310 165 L275 190 Z"
+        fill="url(#cyanMain)"/>
+
+  <!-- Middle horizontal ribbon of E — connects E body to X centre -->
+  <path d="M148 238 L248 172 L275 192 L195 252 Z"
+        fill="url(#cyanMain)" filter="url(#glow)"/>
+  <path d="M248 172 L300 210 L278 228 L232 192 Z"
+        fill="url(#cyanMain)"/>
+
+  <!-- Bottom horizontal ribbon of E — sweeping right, curving up to X lower arm -->
+  <path d="M148 338 L178 358 L298 288 L298 258 L196 318 Z"
+        fill="url(#cyanMain)" filter="url(#glow)"/>
+
+  <!-- X: upper-right arm — angling up-right from centre -->
+  <path d="M288 180 L355 128 L375 138 L318 232 L275 190 Z"
+        fill="url(#cyanRight)" filter="url(#glow)"/>
+
+  <!-- X: lower-right arm — angling down-right from centre -->
+  <path d="M278 248 L318 220 L378 348 L348 352 Z"
+        fill="url(#cyanRight)" filter="url(#glow)"/>
+
+  <!-- X: forward diagonal (bottom-left to top-right crossing stroke) -->
+  <path d="M196 318 L322 232 L356 258 L222 352 Z"
+        fill="url(#cyanMain)" opacity="0.9"/>
+
+  <!-- ── Amber/Orange glowing intersection hotspot ── -->
+  <ellipse cx="310" cy="230" rx="28" ry="14" transform="rotate(-28 310 230)"
+           fill="url(#amberGlow)" filter="url(#amberFilter)" opacity="0.95"/>
+  <ellipse cx="310" cy="230" rx="12" ry="6" transform="rotate(-28 310 230)"
+           fill="#ffdd00" opacity="0.9" filter="url(#amberFilter)"/>
+  <circle cx="312" cy="228" r="4" fill="#ffffff" opacity="0.95"/>
+</svg>

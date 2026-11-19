@@ -1,0 +1,668 @@
+{
+  "users": [
+    {
+      "id": "usr-admin-001",
+      "email": "admin@econvyx.ai",
+      "fullName": "Vikram Joshi",
+      "phone": "+91 98220 12345",
+      "passwordHash": "$2b$10$SX6QU/GenW9j9PEBSxJLout8sJ/BZSWLcaKRttMAiB9dZbNuKXS.C",
+      "role": "owner",
+      "createdAt": "2026-01-01T00:00:00Z",
+      "updatedAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "usr-1795064585325-myu4b9",
+      "email": "realuser_1795064584693@company.in",
+      "fullName": "Sunil Verma",
+      "passwordHash": "$2b$12$tieWYArvkjQ3hR6JBZvuIePy02q70L2CgMih6vPhLEb.xCOvB4FcG",
+      "role": "owner",
+      "createdAt": "2026-11-19T05:03:05.325Z",
+      "updatedAt": "2026-11-19T05:03:05.325Z"
+    },
+    {
+      "id": "usr-1795064615061-4hlb7o",
+      "email": "realuser_inspect@company.in",
+      "fullName": "Sunil Verma",
+      "passwordHash": "$2b$12$Ho7lFcTs7URIc7pCF.d.AOEnfRnmWeJxMAcA6.Ky09nu9cX/e41Zi",
+      "role": "owner",
+      "createdAt": "2026-11-19T05:03:35.061Z",
+      "updatedAt": "2026-11-19T05:03:35.061Z"
+    },
+    {
+      "id": "usr-1795064733812-zek0bx",
+      "email": "founder_1795064733189@apexmanufacturing.in",
+      "fullName": "Rohit Kulkarni",
+      "passwordHash": "$2b$12$aQCkpXcRo8m/5FC8hgvsVuXd8A6DIfhwiq5WeOE6lnM/oRG2KXA6G",
+      "role": "owner",
+      "createdAt": "2026-11-19T05:05:33.812Z",
+      "updatedAt": "2026-11-19T05:05:33.812Z"
+    },
+    {
+      "id": "usr-1795082183098-0x558z",
+      "email": "raj2@gmail.comm",
+      "fullName": "raj kumar",
+      "passwordHash": "$2b$12$MCS1mGZpTQT5Lze/7WhFJeBUbzxHBeyl.fwVHSA/LeaBvuAfUKgAS",
+      "role": "owner",
+      "createdAt": "2026-11-19T09:56:23.098Z",
+      "updatedAt": "2026-11-19T09:56:23.098Z"
+    },
+    {
+      "id": "usr-1795083385644-z4e482",
+      "email": "user_1795083385222@org.in",
+      "fullName": "Deepak Rao",
+      "passwordHash": "$2b$12$P/K0Oud91o/G22RjMVbHweDikeuQ.HbY1Ev6f3pOds83Sukig0tIu",
+      "role": "owner",
+      "createdAt": "2026-11-19T10:16:25.644Z",
+      "updatedAt": "2026-11-19T10:16:25.644Z"
+    }
+  ],
+  "businessWorkspaces": [
+    {
+      "id": "ws-apex-demo-001",
+      "name": "ECONVYX Technologies & Manufacturing",
+      "slug": "econvyx-manufacturing",
+      "businessType": "manufacturing",
+      "industry": "Precision Automotive Engineering",
+      "gstin": "27AAACE1234F1Z5",
+      "pan": "AAACA9922K",
+      "address": "Plot 42, Chakan Industrial Area, Phase II",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pinCode": "410501",
+      "defaultCurrency": "INR",
+      "financialYearStart": "04-01",
+      "defaultPaymentTermsDays": 30,
+      "timezone": "Asia/Kolkata",
+      "isDemo": false,
+      "createdAt": "2026-01-01T00:00:00Z",
+      "updatedAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "ws-1795064733835-ue6r",
+      "name": "Kulkarni Precision Auto Components",
+      "slug": "kulkarni-precision-auto-components",
+      "businessType": "manufacturing",
+      "industry": "Automotive Precision Engineering",
+      "gstin": "27AABCK1234N1Z8",
+      "pan": "AABCK1234N",
+      "address": "Plot 48, Chakan MIDC Phase 2",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pinCode": "410501",
+      "defaultCurrency": "INR",
+      "financialYearStart": "04-01",
+      "defaultPaymentTermsDays": 30,
+      "timezone": "Asia/Kolkata",
+      "isDemo": false,
+      "createdAt": "2026-11-19T05:05:33.835Z",
+      "updatedAt": "2026-11-19T05:05:33.835Z"
+    },
+    {
+      "id": "ws-1795082463239-10zr",
+      "name": "maruthi constructions private limited",
+      "slug": "maruthi-constructions-private-limited",
+      "businessType": "manufacturing",
+      "industry": "Engineering & Manufacturing",
+      "gstin": "",
+      "pan": "",
+      "address": "",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pinCode": "",
+      "defaultCurrency": "INR",
+      "financialYearStart": "04-01",
+      "defaultPaymentTermsDays": 30,
+      "timezone": "Asia/Kolkata",
+      "isDemo": false,
+      "createdAt": "2026-11-19T10:01:03.239Z",
+      "updatedAt": "2026-11-19T10:01:03.239Z"
+    }
+  ],
+  "workspaceMembers": [
+    {
+      "id": "wm-demo-001",
+      "workspaceId": "ws-apex-demo-001",
+      "userId": "usr-admin-001",
+      "role": "owner",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "wm-1795064733838",
+      "workspaceId": "ws-1795064733835-ue6r",
+      "userId": "usr-1795064733812-zek0bx",
+      "role": "owner",
+      "createdAt": "2026-11-19T05:05:33.838Z"
+    },
+    {
+      "id": "wm-1795082463244",
+      "workspaceId": "ws-1795082463239-10zr",
+      "userId": "usr-1795082183098-0x558z",
+      "role": "owner",
+      "createdAt": "2026-11-19T10:01:03.244Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust-001",
+      "workspaceId": "ws-apex-demo-001",
+      "name": "Precision AutoTech Ltd",
+      "companyName": "Precision AutoTech Ltd",
+      "email": "accounts@precisionautotech.in",
+      "phone": "+91 20 6711 4000",
+      "gstin": "27AABCP1122D1Z4",
+      "billingAddress": "Gat No. 340, Mahalunge, Chakan, Pune 410501",
+      "paymentTermsDays": 30,
+      "creditLimitPaise": 100000000,
+      "notes": "Key OEM tier-1 buyer. Reliable but occasionally delays due to internal audit cycles.",
+      "isActive": true,
+      "createdAt": "2026-01-05T00:00:00Z",
+      "updatedAt": "2026-01-05T00:00:00Z"
+    },
+    {
+      "id": "cust-002",
+      "workspaceId": "ws-apex-demo-001",
+      "name": "Bharat Electricals & Cables",
+      "companyName": "Bharat Electricals & Cables Ltd",
+      "email": "procurement@bharatelectricals.com",
+      "phone": "+91 22 2855 9000",
+      "gstin": "27AABCB9988E1Z9",
+      "billingAddress": "Plot 12, MIDC Andheri East, Mumbai 400093",
+      "paymentTermsDays": 30,
+      "creditLimitPaise": 50000000,
+      "notes": "Consistent prompt payer with weekly batch settlement.",
+      "isActive": true,
+      "createdAt": "2026-01-08T00:00:00Z",
+      "updatedAt": "2026-01-08T00:00:00Z"
+    },
+    {
+      "id": "cust-003",
+      "workspaceId": "ws-apex-demo-001",
+      "name": "Zenith Engineering Works",
+      "companyName": "Zenith Engineering Works LLP",
+      "email": "finance@zenitheng.co.in",
+      "phone": "+91 265 243 1100",
+      "gstin": "24AABCZ3344F1Z1",
+      "billingAddress": "Makarpura GIDC, Vadodara, Gujarat 390010",
+      "paymentTermsDays": 45,
+      "creditLimitPaise": 30000000,
+      "notes": "New account onboarded in Q3.",
+      "isActive": true,
+      "createdAt": "2026-01-10T00:00:00Z",
+      "updatedAt": "2026-01-10T00:00:00Z"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "supp-001",
+      "workspaceId": "ws-apex-demo-001",
+      "name": "RawMetals Alloy India Pvt Ltd",
+      "contactPerson": "Suresh Singhania",
+      "email": "sales@rawmetals.co.in",
+      "phone": "+91 20 2744 8899",
+      "gstin": "27AABCR7766K1Z3",
+      "address": "Bhosari Industrial Estate, Pune 411026",
+      "paymentTermsDays": 30,
+      "notes": "Primary supplier for cold-rolled steel billets.",
+      "isActive": true,
+      "createdAt": "2026-01-02T00:00:00Z",
+      "updatedAt": "2026-01-02T00:00:00Z"
+    },
+    {
+      "id": "supp-002",
+      "workspaceId": "ws-apex-demo-001",
+      "name": "Shanti Packaging & Logistics",
+      "contactPerson": "Karan Mehta",
+      "email": "billing@shantipackaging.in",
+      "phone": "+91 20 2567 1122",
+      "gstin": "27AABCS5544L1Z8",
+      "address": "Hadapsar Industrial Estate, Pune 411013",
+      "paymentTermsDays": 15,
+      "notes": "Supplies corrugated export-grade cartons.",
+      "isActive": true,
+      "createdAt": "2026-01-03T00:00:00Z",
+      "updatedAt": "2026-01-03T00:00:00Z"
+    }
+  ],
+  "documents": [],
+  "invoices": [
+    {
+      "id": "inv-101",
+      "workspaceId": "ws-apex-demo-001",
+      "customerId": "cust-001",
+      "invoiceNumber": "INV-101",
+      "issueDate": "2026-01-15",
+      "dueDate": "2026-02-14",
+      "paymentTermsDays": 30,
+      "poReference": "PO-2026-001",
+      "subtotalPaise": 42372881,
+      "taxableAmountPaise": 42372881,
+      "cgstPaise": 3813560,
+      "sgstPaise": 3813559,
+      "igstPaise": 0,
+      "discountPaise": 0,
+      "totalAmountPaise": 50000000,
+      "receivedAmountPaise": 0,
+      "outstandingAmountPaise": 50000000,
+      "status": "overdue",
+      "notes": "Export quality alloy fasteners batch A-9. Overdue follow-up initiated.",
+      "items": [
+        {
+          "id": "item-101-1",
+          "invoiceId": "inv-101",
+          "description": "High-Tensile Precision Fasteners (M12)",
+          "hsnSac": "7318",
+          "quantity": 100,
+          "unit": "units",
+          "unitPricePaise": 423729,
+          "taxRatePercent": 18,
+          "taxableAmountPaise": 42372881,
+          "cgstPaise": 3813560,
+          "sgstPaise": 3813559,
+          "igstPaise": 0,
+          "totalAmountPaise": 50000000
+        }
+      ],
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": "inv-102",
+      "workspaceId": "ws-apex-demo-001",
+      "customerId": "cust-002",
+      "invoiceNumber": "INV-102",
+      "issueDate": "2026-02-01",
+      "dueDate": "2026-03-03",
+      "paymentTermsDays": 30,
+      "poReference": "PO-2026-045",
+      "subtotalPaise": 16949153,
+      "taxableAmountPaise": 16949153,
+      "cgstPaise": 1525424,
+      "sgstPaise": 1525423,
+      "igstPaise": 0,
+      "discountPaise": 0,
+      "totalAmountPaise": 20000000,
+      "receivedAmountPaise": 10000000,
+      "outstandingAmountPaise": 10000000,
+      "status": "partially_paid",
+      "notes": "First tranche of ₹1,00,000 confirmed via bank receipt; remaining ₹1,00,000 balance pending.",
+      "items": [
+        {
+          "id": "item-102-1",
+          "invoiceId": "inv-102",
+          "description": "Sub-assembly Bushing Kits",
+          "hsnSac": "8483",
+          "quantity": 50,
+          "unit": "sets",
+          "unitPricePaise": 338983,
+          "taxRatePercent": 18,
+          "taxableAmountPaise": 16949153,
+          "cgstPaise": 1525424,
+          "sgstPaise": 1525423,
+          "igstPaise": 0,
+          "totalAmountPaise": 20000000
+        }
+      ],
+      "createdAt": "2026-02-01T11:00:00Z",
+      "updatedAt": "2026-02-01T11:00:00Z"
+    },
+    {
+      "id": "inv-103",
+      "workspaceId": "ws-apex-demo-001",
+      "customerId": "cust-003",
+      "invoiceNumber": "INV-103",
+      "issueDate": "2026-02-10",
+      "dueDate": "2026-03-27",
+      "paymentTermsDays": 45,
+      "poReference": "PO-2026-088",
+      "subtotalPaise": 8474576,
+      "taxableAmountPaise": 8474576,
+      "cgstPaise": 762712,
+      "sgstPaise": 762712,
+      "igstPaise": 0,
+      "discountPaise": 0,
+      "totalAmountPaise": 10000000,
+      "receivedAmountPaise": 10000000,
+      "outstandingAmountPaise": 0,
+      "status": "paid",
+      "notes": "Fully settled upon delivery.",
+      "items": [
+        {
+          "id": "item-103-1",
+          "invoiceId": "inv-103",
+          "description": "CNC Turned Flanges",
+          "hsnSac": "7307",
+          "quantity": 25,
+          "unit": "pcs",
+          "unitPricePaise": 338983,
+          "taxRatePercent": 18,
+          "taxableAmountPaise": 8474576,
+          "cgstPaise": 762712,
+          "sgstPaise": 762712,
+          "igstPaise": 0,
+          "totalAmountPaise": 10000000
+        }
+      ],
+      "createdAt": "2026-02-10T14:00:00Z",
+      "updatedAt": "2026-02-10T14:00:00Z"
+    }
+  ],
+  "bills": [
+    {
+      "id": "bill-401",
+      "workspaceId": "ws-apex-demo-001",
+      "supplierId": "supp-001",
+      "billNumber": "BILL-401",
+      "billDate": "2026-02-12",
+      "dueDate": "2026-03-14",
+      "paymentTermsDays": 30,
+      "poReference": "PO-RM-2026-12",
+      "totalAmountPaise": 15000000,
+      "paidAmountPaise": 0,
+      "outstandingAmountPaise": 15000000,
+      "status": "approved",
+      "notes": "Raw steel billets batch #82.",
+      "createdAt": "2026-02-12T09:00:00Z",
+      "updatedAt": "2026-02-12T09:00:00Z"
+    },
+    {
+      "id": "bill-402",
+      "workspaceId": "ws-apex-demo-001",
+      "supplierId": "supp-002",
+      "billNumber": "BILL-402",
+      "billDate": "2026-02-15",
+      "dueDate": "2026-03-02",
+      "paymentTermsDays": 15,
+      "poReference": "PO-PK-2026-05",
+      "totalAmountPaise": 8000000,
+      "paidAmountPaise": 0,
+      "outstandingAmountPaise": 8000000,
+      "status": "pending_review",
+      "notes": "Packaging boxes for export order.",
+      "createdAt": "2026-02-15T11:00:00Z",
+      "updatedAt": "2026-02-15T11:00:00Z"
+    }
+  ],
+  "purchaseOrders": [
+    {
+      "id": "po-demo-001",
+      "workspaceId": "ws-apex-demo-001",
+      "supplierId": "supp-001",
+      "poNumber": "PO-2026-001",
+      "poDate": "2026-01-10",
+      "deliveryDeadline": "2026-02-05",
+      "totalValuePaise": 50000000,
+      "status": "active",
+      "items": [
+        {
+          "id": "poi-1",
+          "poId": "po-demo-001",
+          "description": "High-Tensile Precision Fasteners (M12)",
+          "quantity": 100,
+          "unitPricePaise": 500000,
+          "totalAmountPaise": 50000000
+        }
+      ],
+      "createdAt": "2026-01-10T09:00:00Z"
+    }
+  ],
+  "goodsReceiptNotes": [
+    {
+      "id": "grn-demo-001",
+      "workspaceId": "ws-apex-demo-001",
+      "poId": "po-demo-001",
+      "grnNumber": "GRN-2026-001",
+      "receivedDate": "2026-01-28",
+      "receivedItems": [
+        {
+          "description": "High-Tensile Precision Fasteners (M12)",
+          "quantity": 100
+        }
+      ],
+      "createdAt": "2026-01-28T16:00:00Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay-demo-001",
+      "workspaceId": "ws-apex-demo-001",
+      "paymentNumber": "REC-2026-001",
+      "paymentType": "incoming",
+      "paymentDate": "2026-02-05",
+      "amountPaise": 10000000,
+      "allocatedAmountPaise": 10000000,
+      "unallocatedAmountPaise": 0,
+      "paymentMode": "bank_transfer",
+      "referenceNumber": "CMS8821901",
+      "customerId": "cust-002",
+      "notes": "Initial 50% advance for INV-102.",
+      "createdAt": "2026-02-05T15:00:00Z",
+      "updatedAt": "2026-02-05T15:00:00Z"
+    },
+    {
+      "id": "pay-demo-002",
+      "workspaceId": "ws-apex-demo-001",
+      "paymentNumber": "REC-2026-002",
+      "paymentType": "incoming",
+      "paymentDate": "2026-02-11",
+      "amountPaise": 10000000,
+      "allocatedAmountPaise": 10000000,
+      "unallocatedAmountPaise": 0,
+      "paymentMode": "bank_transfer",
+      "referenceNumber": "CMS9901823",
+      "customerId": "cust-003",
+      "notes": "Full settlement for INV-103.",
+      "createdAt": "2026-02-11T12:00:00Z",
+      "updatedAt": "2026-02-11T12:00:00Z"
+    }
+  ],
+  "paymentAllocations": [
+    {
+      "id": "alloc-001",
+      "workspaceId": "ws-apex-demo-001",
+      "paymentId": "pay-demo-001",
+      "invoiceId": "inv-102",
+      "amountPaise": 10000000,
+      "createdAt": "2026-02-05T15:05:00Z"
+    },
+    {
+      "id": "alloc-002",
+      "workspaceId": "ws-apex-demo-001",
+      "paymentId": "pay-demo-002",
+      "invoiceId": "inv-103",
+      "amountPaise": 10000000,
+      "createdAt": "2026-02-11T12:05:00Z"
+    }
+  ],
+  "bankTransactions": [
+    {
+      "id": "btxn-demo-001",
+      "workspaceId": "ws-apex-demo-001",
+      "transactionDate": "2026-02-18",
+      "description": "NEFT CR-AXIS/928371/BHARAT ELECTRICALS/INV102 TRN",
+      "referenceNumber": "AXISN928371004",
+      "type": "credit",
+      "amountPaise": 10000000,
+      "balancePaise": 20000000,
+      "reconciliationStatus": "suggested",
+      "matchedInvoiceId": "inv-102",
+      "matchConfidence": 96,
+      "matchReason": "Exact outstanding balance match (₹1,00,000); Invoice number INV-102 and counterparty \"Bharat Electricals\" identified in NEFT narration.",
+      "createdAt": "2026-02-18T10:30:00Z"
+    }
+  ],
+  "verificationCases": [
+    {
+      "id": "vc-demo-001",
+      "workspaceId": "ws-apex-demo-001",
+      "caseNumber": "VC-2026-101",
+      "invoiceId": "inv-101",
+      "poId": "po-demo-001",
+      "grnId": "grn-demo-001",
+      "status": "verified",
+      "summary": "Quantity mismatch detected: Billed for 120 units, but PO authorized 100 units and GRN confirms 100 units.",
+      "monetaryImpactPaise": 10000000,
+      "findings": [
+        {
+          "id": "vf-001",
+          "caseId": "vc-demo-001",
+          "fieldName": "Quantity: High-Tensile Precision Fasteners (M12)",
+          "expectedValue": "100 units (PO / GRN)",
+          "actualValue": "120 units (Vendor Invoice)",
+          "differenceValue": "+20 units excess billed",
+          "monetaryDifferencePaise": 10000000,
+          "severity": "high",
+          "description": "Vendor invoiced for 120 units at ₹5,000/unit (₹6,00,000), but approved PO only authorizes 100 units (₹5,00,000). Total unauthorized excess of ₹1,00,000."
+        }
+      ],
+      "createdAt": "2026-01-16T12:00:00Z",
+      "updatedAt": "2026-11-19T04:14:41.315Z",
+      "resolvedAt": "2026-11-19T04:14:41.315Z"
+    }
+  ],
+  "cashFlowScenarios": [],
+  "reminders": [
+    {
+      "id": "rem-demo-001",
+      "workspaceId": "ws-apex-demo-001",
+      "invoiceId": "inv-101",
+      "customerId": "cust-001",
+      "tone": "professional",
+      "subject": "Payment Follow-up: Invoice #INV-101 - ₹5,00,000.00 Due",
+      "messageBody": "Dear Precision AutoTech Ltd,\n\nWe are writing to follow up on the payment for Invoice #INV-101, dated 2026-01-15, with a total outstanding balance of ₹5,00,000.00.\n\nAs per our agreed payment terms, the payment was due on 2026-02-14 and is now overdue.\n\nPlease arrange for the remittance at your earliest convenience or share the transaction UTR number if already processed.\n\nSincerely,\nFinance Department\nApex Components",
+      "status": "draft",
+      "createdAt": "2026-02-15T10:00:00Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit-1795083385646-tgozba",
+      "createdAt": "2026-11-19T10:16:25.646Z",
+      "workspaceId": "global",
+      "userEmail": "user_1795083385222@org.in",
+      "action": "USER_REGISTERED",
+      "entityType": "user",
+      "entityId": "usr-1795083385644-z4e482",
+      "details": "New user registered: Deepak Rao (user_1795083385222@org.in)"
+    },
+    {
+      "id": "audit-1795083385206-hradh8",
+      "createdAt": "2026-11-19T10:16:25.206Z",
+      "workspaceId": "global",
+      "userEmail": "admin@econvyx.ai",
+      "action": "USER_SIGNED_IN",
+      "entityType": "user",
+      "entityId": "usr-admin-001",
+      "details": "User signed in: admin@econvyx.ai"
+    },
+    {
+      "id": "audit-1795082463249-kr3j0s",
+      "createdAt": "2026-11-19T10:01:03.249Z",
+      "workspaceId": "ws-1795082463239-10zr",
+      "userEmail": "raj2@gmail.comm",
+      "action": "BUSINESS_WORKSPACE_ONBOARDED",
+      "entityType": "business_workspace",
+      "entityId": "ws-1795082463239-10zr",
+      "details": "raj kumar completed onboarding for \"maruthi constructions private limited\" (manufacturing)."
+    },
+    {
+      "id": "audit-1795082183104-9coryj",
+      "createdAt": "2026-11-19T09:56:23.104Z",
+      "workspaceId": "global",
+      "userEmail": "raj2@gmail.comm",
+      "action": "USER_REGISTERED",
+      "entityType": "user",
+      "entityId": "usr-1795082183098-0x558z",
+      "details": "New user registered: raj kumar (raj2@gmail.comm)"
+    },
+    {
+      "id": "audit-1795064733843-xh5fwb",
+      "createdAt": "2026-11-19T05:05:33.843Z",
+      "workspaceId": "ws-1795064733835-ue6r",
+      "userEmail": "founder_1795064733189@apexmanufacturing.in",
+      "action": "BUSINESS_WORKSPACE_ONBOARDED",
+      "entityType": "business_workspace",
+      "entityId": "ws-1795064733835-ue6r",
+      "details": "Rohit Kulkarni completed onboarding for \"Kulkarni Precision Auto Components\" (manufacturing)."
+    },
+    {
+      "id": "audit-1795064733817-b3mha3",
+      "createdAt": "2026-11-19T05:05:33.817Z",
+      "workspaceId": "global",
+      "userEmail": "founder_1795064733189@apexmanufacturing.in",
+      "action": "USER_REGISTERED",
+      "entityType": "user",
+      "entityId": "usr-1795064733812-zek0bx",
+      "details": "New user registered: Rohit Kulkarni (founder_1795064733189@apexmanufacturing.in)"
+    },
+    {
+      "id": "audit-1795064733170-0ta1ix",
+      "createdAt": "2026-11-19T05:05:33.170Z",
+      "workspaceId": "global",
+      "userEmail": "admin@econvyx.ai",
+      "action": "USER_SIGNED_IN",
+      "entityType": "user",
+      "entityId": "usr-admin-001",
+      "details": "User signed in: admin@econvyx.ai"
+    },
+    {
+      "id": "audit-1795064615064-476cpv",
+      "createdAt": "2026-11-19T05:03:35.064Z",
+      "workspaceId": "global",
+      "userEmail": "realuser_inspect@company.in",
+      "action": "USER_REGISTERED",
+      "entityType": "user",
+      "entityId": "usr-1795064615061-4hlb7o",
+      "details": "New user registered: Sunil Verma (realuser_inspect@company.in)"
+    },
+    {
+      "id": "audit-1795064585329-ou9v52",
+      "createdAt": "2026-11-19T05:03:05.329Z",
+      "workspaceId": "global",
+      "userEmail": "realuser_1795064584693@company.in",
+      "action": "USER_REGISTERED",
+      "entityType": "user",
+      "entityId": "usr-1795064585325-myu4b9",
+      "details": "New user registered: Sunil Verma (realuser_1795064584693@company.in)"
+    },
+    {
+      "id": "audit-1795061681325-t7x41v",
+      "createdAt": "2026-11-19T04:14:41.326Z",
+      "workspaceId": "ws-apex-demo-001",
+      "userEmail": "demo@econvyx.ai",
+      "action": "VERIFICATION_ACCEPT_WITH_EXPLANATION",
+      "entityType": "verification_case",
+      "entityId": "vc-demo-001",
+      "details": "Human reviewer performed action: accept_with_explanation. Reason: N/A. Status updated to: verified."
+    },
+    {
+      "id": "audit-001",
+      "workspaceId": "ws-apex-demo-001",
+      "userEmail": "demo@econvyx.ai",
+      "action": "WORKSPACE_INITIALIZED",
+      "entityType": "business_workspace",
+      "entityId": "ws-apex-demo-001",
+      "details": "Apex Components demonstration workspace initialized with seeded verified financial records.",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "audit-002",
+      "workspaceId": "ws-apex-demo-001",
+      "userEmail": "demo@econvyx.ai",
+      "action": "VERIFICATION_DISCREPANCY_FLAGGED",
+      "entityType": "verification_case",
+      "entityId": "vc-demo-001",
+      "details": "Deterministic matching detected 20-unit quantity discrepancy (₹1,00,000 variance) on PO-2026-001 vs vendor invoice.",
+      "createdAt": "2026-01-16T12:00:00Z"
+    },
+    {
+      "id": "audit-003",
+      "workspaceId": "ws-apex-demo-001",
+      "userEmail": "demo@econvyx.ai",
+      "action": "BANK_MATCH_SUGGESTED",
+      "entityType": "bank_transaction",
+      "entityId": "btxn-demo-001",
+      "details": "Suggested 96% confidence match between transaction AXISN928371004 and INV-102.",
+      "createdAt": "2026-02-18T10:30:00Z"
+    }
+  ]
+}
